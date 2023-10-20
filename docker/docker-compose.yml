@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql-container
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: poke
+      MYSQL_USER: testuser
+      MYSQL_PASSWORD: 1234
+    volumes:
+      - ./mysql-data:/var/lib/mysql
